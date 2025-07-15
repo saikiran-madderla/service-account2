@@ -34,5 +34,7 @@ jobs:
           --trigger-topic my-topic \
           --entry-point send_notification \
           --source . \
+          --platform managed \
           --region=us-central1 \
+          --ingress internal
           --set-env-vars="username=${{ secrets.EMAIL_USERNAME }},password=${{ secrets.EMAIL_PASSWORD }},sender=${{ secrets.EMAIL_SENDER }},SMTP=${{ secrets.EMAIL_SMTP }},recipients=${{ secrets.EMAIL_RECIPIENTS }}"
